@@ -56,12 +56,12 @@ jobs:
           context: ./src
           tags: ghcr.io/azure/gitops-connector:${{ env.IMAGE_TAG }}, ghcr.io/azure/gitops-connector:latest
       - name: Upload Image Tags
-        uses: actions/upload-artifact@v2.2.2
+        uses: actions/upload-artifact@v4.6.0
         with:
           name: image_tags
           path: ${{ github.workspace }}/IMAGE_TAG
       - name: Upload Manifests Templates
-        uses: actions/upload-artifact@v2.2.2
+        uses: actions/upload-artifact@v4.6.0
         with:
           name: manifests
           path: ${{ github.workspace }}/manifests
